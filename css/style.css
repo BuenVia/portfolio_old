@@ -1,7 +1,8 @@
 :root {
-    --bckgd-clr-main: #FFFFFF;
+    --bckgd-clr-main: #f1f1f1;
     --bckgd-clr-second: #EF0107;
-    --bckgd-clr-third: #063672;
+    --bckgd-clr-third: #ffffff;
+    --bckgd-clr-fourth: #063672;
     --text-clr-main: #222;
     --text-clr-second: #FFFFFF;
 }
@@ -17,7 +18,7 @@ html, body {
 header {
     background-color: var(--bckgd-clr-second);
     padding: 15px;
-    border-bottom: 10px solid var(--bckgd-clr-third);
+    border-bottom: 10px solid var(--bckgd-clr-fourth);
 }
 
 header a {
@@ -25,6 +26,7 @@ header a {
     color: var(--text-clr-second);
     margin-right: 20px;
 }
+
 
 @media only screen and (min-width: 800px) {
     .wrapper {
@@ -40,6 +42,42 @@ header a {
 .main {
     overflow: auto;
     padding-bottom: 100px;
+    padding: 15px;
+    background-color: var(--bckgd-clr-main);
+}
+
+.box-head {
+    border: 5px solid var(--bckgd-clr-second);
+    background-color: var(--bckgd-clr-second);
+    color: var(--text-clr-second);
+    font-size: 20px;
+    font-weight: 600;
+    padding: 7px;
+}
+
+.box-main {
+    display: flex;
+    justify-content: center;
+    background-color: var(--bckgd-clr-third);
+    border-top: 3px solid var(--bckgd-clr-second);
+    margin-top: 10px;
+    flex-wrap: wrap;
+}
+.box-main img {
+    height: 150px;
+}
+.box-main p {
+    color: var(--text-clr-main);
+    text-decoration: none;
+    float: right;
+}
+.box-text1 {
+    padding: 10px;
+    float: right;
+}
+.box-text2 {
+    padding: 10px;
+    float: right;
 }
 
 footer {
