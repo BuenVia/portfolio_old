@@ -18,7 +18,7 @@ html, body {
 header {
     background-color: var(--bckgd-clr-second);
     padding: 15px;
-    border-bottom: 10px solid var(--bckgd-clr-fourth);
+    border-bottom: 30px solid var(--bckgd-clr-fourth);
 }
 
 header a {
@@ -27,8 +27,21 @@ header a {
     margin-right: 20px;
 }
 
-
 @media only screen and (min-width: 800px) {
+    header {
+        height: 100px;
+        border-bottom: 70px solid var(--bckgd-clr-fourth);
+    }
+    header a {
+        text-decoration: none;
+        color: var(--text-clr-second);
+        margin-right: 20px;
+        font-size: 30px;
+        line-height: 100px;
+    }
+}
+
+@media only screen and (min-width: 1000px) {
     .wrapper {
         margin: 0 auto;
         width: 1000px;
@@ -40,6 +53,8 @@ header a {
 }
 
 .main {
+    display: flex;
+    flex-direction: column;
     overflow: auto;
     padding-bottom: 100px;
     padding: 15px;
@@ -53,31 +68,32 @@ header a {
     font-size: 20px;
     font-weight: 600;
     padding: 7px;
+    margin-top: 5px
 }
 
 .box-main {
     display: flex;
-    justify-content: center;
+    flex-direction: row;
+    align-content: space-between;
     background-color: var(--bckgd-clr-third);
     border-top: 3px solid var(--bckgd-clr-second);
-    margin-top: 10px;
-    flex-wrap: wrap;
+    margin-top: 20px;
+    cursor: pointer;
+}
+
+.box-main:hover {
+    opacity: 0.9;
+    box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
 }
 .box-main img {
     height: 150px;
 }
-.box-main p {
-    color: var(--text-clr-main);
-    text-decoration: none;
-    float: right;
+
+.box-left {
+
 }
-.box-text1 {
-    padding: 10px;
-    float: right;
-}
-.box-text2 {
-    padding: 10px;
-    float: right;
+.box-right {
+    padding: 20px;
 }
 
 footer {
