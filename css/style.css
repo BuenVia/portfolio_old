@@ -41,10 +41,10 @@ header a {
     }
 }
 
-@media only screen and (min-width: 1000px) {
+@media only screen and (min-width: 1200px) {
     .wrapper {
         margin: 0 auto;
-        width: 1000px;
+        width: 1200px;
     }
 }
 
