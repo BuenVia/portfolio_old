@@ -79,8 +79,9 @@ header a {
     cursor: pointer;
     margin-top: 20px;
     border-top: 3px solid var(--bckgd-clr-second);
-    max-width: 800px;
+    max-width: 40%;
     overflow: hidden;
+    float: left;
 }
 @media only screen and (max-width: 600px) {
     .new-box {
@@ -89,20 +90,15 @@ header a {
         flex-wrap: wrap;
     }
     .new-left-img {
-        height: 100px;
+        max-height: 100px;
     }
-    .new-left-img img {
-        width: 100%;
-        display: block;
-        margin-left: auto;
-        margin-right: auto;
-    }
+
 }
 .new-left-img {
     min-width: 100px;
 }
 .new-left-img img {
-    max-width: 450px;
+    max-width: 600px;
     display: block;
     margin-left: auto;
     margin-right: auto;
