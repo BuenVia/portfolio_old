@@ -89,13 +89,43 @@ header a {
     box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
 }
 .box-main img {
-    height: 150px;
+    width: 150px;
 }
 
 .box-left {
-
+    display: block;
+    width: auto;
+    height: auto;
 }
 .box-right {
+    padding: 20px;
+    width: 60%;
+}
+
+.new-box {
+    display: flex;
+    flex-direction: row;
+    align-content: space-between;
+    cursor: pointer;
+    min-height: ;
+    margin-top: 20px;
+    border-top: 3px solid var(--bckgd-clr-second);
+    max-width: 800px;
+    overflow: hidden;
+}
+.new-left-img {
+    min-width: 100px;
+}
+.new-left-img img {
+    max-width: 450px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+.new-right-text {
+    background-color: var(--bckgd-clr-third);
+    min-width: 150px;
+    width: 100%;
     padding: 20px;
 }
 
