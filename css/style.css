@@ -1,98 +1,41 @@
 :root {
+    --bkg-clr-title: #00dddd;
+    --bkg-clr-main: #fff;
     --text-clr-title: #fff;
+    --btn-clr-main: #99a1af;
 }
 
 * {
     font-family: 'Raleway', sans-serif;
 }
 
-html, body {
-
-}
-
-.grid {
-    display: grid;
-    height: 100vh;
-    grid-template-columns: 1fr 1fr 1fr 1fr;
-    grid-template-rows: 0.5fr 1fr 1.5fr 1.5fr 0.5fr;
-    grid-template-areas: 
-    "header header header header"
-    "image-line image-line image-line image-line"
-    "sidebar main main main"
-    "sidebar box1 box1 box2"
-    "footer footer footer footer";
-}
-@media screen and (max-width: 600px) {
-    .grid {
-        display: grid;
-        height: 100vh;
-        grid-template-columns: 1fr;
-        grid-template-rows: 0.3fr 1fr 1fr 1fr 1fr 1fr 0.7fr;
-        grid-template-areas: 
-        "header"
-        "image-line"
-        "sidebar"
-        "main"
-        "box1"
-        "box2"
-        "footer";
-    }
+body {
+    height: 100%;
+    background-image: url(../images/bg1.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center right;
+    background-attachment: fixed;
 }
 
 header {
-    background-color: #34445f;
-    grid-area: header;
-    padding: 10px;
+    background-color:rgba(0, 221, 221, 0.3);
+    padding: 15px;
+    height: 20px;
 }
 header a {
-    color: var(--text-clr-title);
-    font-size: 32px;
-    font-weight: 600;
-    padding: 20px;
-    text-decoration: none;
-    line-height: 50px;
+display: none;
+color: var(--text-clr-title);
+text-decoration: none;
+font-size: 18px;
+font-weight: 500;    
+}
+header i {
+    float: right;
 }
 
-.image-line {
-    background-image: url(../images/code.jpg);
-    background-position: center;
-    grid-area: image-line;
-    text-align: center;
-}
-.image-line p {
-    color: var(--text-clr-title);
-    font-size: 40px;
-    font-weight: 900;
-    line-height: 150px;
-}
-.sidebar {
-    background-color: #5c697e;
-    grid-area: sidebar;
-}
-
-.sidebar .show {
-    display: none;
-}
-.sidebar.change .show {
-    display: block;
-}
-
-main {
-    background-color: #707c8f;
-    grid-area: main;
-}
-
-.box1 {
-    background-color: #858e9f;
-    grid-area: box1;
-}
-
-.box2 {
-    background-color: #99a1af;
-    grid-area: box2;
-}
-
-footer {
-    background-color: #adb4bf;
-    grid-area: footer;
+@media screen and (min-width: 600px) {
+    header a {
+        display: inline;
+    }
 }
