@@ -14,7 +14,7 @@ body {
     height: 100%;
     width: 100%;
     background: linear-gradient(
-        rgba(1, 1, 1, 0.7), 
+        rgba(1, 1, 1, 0.5), 
         rgba(1, 1, 1, 0.1)
         ), 
         url(../images/bg1.jpg);
@@ -40,7 +40,7 @@ body {
         "sidebar main";
     }
 }
-\/*Header*/
+/*Header*/
 .header {
     background-color:rgba(0, 221, 221, 0.3);
     padding: 10px;
@@ -61,6 +61,7 @@ margin-right: 5%;
     margin-right: 5%;
     color: var(--text-clr-title);
 }
+
 
 .header.change a {
     display: block;
@@ -87,7 +88,6 @@ margin-right: 5%;
     display: block;
     text-align: center;
     margin-top: 50px;
-    margin-left:;
     margin-bottom: 45px;
 }
 .profile img {
@@ -174,6 +174,10 @@ main a:hover{
     main h1 {
         font-size: 52px;
     }
+    main h2 {
+        font-size: 24px;
+        color: var(--text-clr-title);
+    }
     main p {
         font-size: 24px;
     }
@@ -198,4 +202,38 @@ main a:hover{
         font-size: 28px;
         width: 150px;
     }
+}
+
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgb(0, 0, 0);
+    background-color: rgba(0, 0, 0, 0.4);
+}
+
+.modal-content {
+    background-color: #fefefe;
+    margin: 15% auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%;
+}
+
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close:hover,.close:focus {
+    color: #000;
+    text-decoration: none;
+    cursor: pointer;
 }

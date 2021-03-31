@@ -13,6 +13,7 @@
 </head>
 <body>
 
+    <!--Header/ Navbar-->
     <header class="header" id="navhead">
         <a href="javascript:void(0)" class="icon" onclick="navOpen()">
             <i class="fas fa-bars"></i>
@@ -23,6 +24,7 @@
         </a>
     </header>
 
+    <!--Sidebar-->
     <div class="grid">
         <div class="sidebar">
             <section class="profile">
@@ -37,15 +39,24 @@
             <a href="javascript:void(0)">Contact</a>
         </div>
     
+    <!--Main Body-->
         <main>
             <h1>MATT CLIFFORD</h1>
             <p>Front-End Web Developer</p>
-            <a href="javascript:void(0)">Portfolio</a>
+            <a href="javascript:void(0)" id="myBtn">Portfolio</a>
             <a href="javascript:void(0)">Contact</a><br><br><br>
-            <p>email: matt@buenvia.com</p>
+            <h2>email: matt@buenvia.com</h2>
         </main>
     </div>
-
+    
+    <!--Portfolio Modal-->
+    <div id="myModal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <button>Download</button>
+            <p>My Portfolio...</p>            
+        </div>
+    </div>
 
     <script src="js/main.js"></script>
 </body>
