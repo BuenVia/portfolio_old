@@ -24,14 +24,15 @@ body {
 .grid {
     display: grid;
     grid-template-columns: 1fr;
-    grid-row: 1fr;
+    grid-row: 1fr 1fr;
     grid-template-areas: 
-    " main";
+    "header"
+    "main";
 }
 @media screen and (min-width: 770px) {
     .grid {
         display: grid;
-        grid-template-columns: 0.2fr 1.8fr;
+        grid-template-columns: 0.5fr 1.5fr;
         grid-row: 1fr;
         grid-template-areas: 
         "header main";
@@ -43,6 +44,7 @@ body {
     background-color:rgba(0, 221, 221, 0.3);
     padding: 10px;
     min-height: 35px;
+    grid-area: header;
 }
 .header i {
     float: right;
@@ -79,7 +81,7 @@ body {
 .profile h2 {
     color: var(--text-clr-main);
     text-decoration: none;
-    font-size: 15px;
+    font-size: 14px;
     margin-top: 20px;
 }
 .profile h3 {
@@ -92,10 +94,10 @@ body {
     .header {
         display: block;
         background-color:rgba(0, 221, 221, 0.3);
-        padding: 15px;
+        margin-top: 0 auto;
+        padding: 35px;
         min-height: 100vh;
-        width: 20%;
-        grid-area: header;
+        width: 70%;
     }
     .header .fas {
         display: none;
@@ -119,33 +121,12 @@ body {
         display: grid;
     }
 }
-
-/*Sidebar*/
-.sidebar a {
-    color: var(--text-clr-title);
-    display: block;
-    text-decoration: none;
-    padding: 10px;
-    font-size: 20px;
-    font-weight: 600;
-    width: 100px;
-    margin-left: 15%;
-}
-.sidebar a:hover {
-    color: var(--text-clr-main);
-}
-
-@media screen and (min-width: 770px) {
-    .sidebar {
-        display: block;
-    }
-}
 @media screen and (min-width: 1060px) {
     .profile h1 {
         font-size: 32px;
     }
     .profile h2 {
-        font-size: 24px;
+        font-size: 20px;
     }
 }
 /*Main Body*/
@@ -156,6 +137,9 @@ main {
 main h1 {
     color: var(--text-clr-title);
     font-size: 32px;
+}
+.main-intro {
+    display: none;
 }
 main p {
     font-size: 14px;
@@ -193,7 +177,7 @@ main a:hover{
   }
 @media screen and (min-width: 500px) {
     main {
-        padding: 10%;
+        padding: 15%;
     }
     main h1 {
         font-size: 52px;
@@ -213,11 +197,17 @@ main a:hover{
 
 @media screen and (min-width: 770px) {
     main {
-        padding-top: 20%;
-        padding-left: 0;
+        padding-top: 25%;
+        padding-left: 10%;
     }
     main h1 {
-        font-size: 52px;
+        font-size: 40px;
+    }
+    .main-name {
+        display: none;
+    }
+    .main-intro {
+        display: block;
     }
     main h2 {
         font-size: 24px;
