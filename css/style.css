@@ -245,14 +245,27 @@ main a:hover{
     background-color: rgba(0, 0, 0, 0.4);
 }
 .contact-content {
-    background-color: #fefefe;
-    margin: 15% auto;
+    background-color:rgba(0, 221, 221, 0.7);
+    border-radius: 10px;
+    margin: 25% auto;
     padding: 20px;
     border: 1px solid #888;
     width: 80%;
+
+}
+@media screen and (min-width: 768px) {
+    .contact-content {
+        background-color:rgba(0, 221, 221, 0.7);
+        border-radius: 10px;
+        margin: 15% auto;
+        padding: 20px;
+        border: 1px solid #888;
+        width: 40%;
+    
+    }
 }
 .conClose {
-    color: #aaa;
+    color: #ffffff;
     float: right;
     font-size: 28px;
     font-weight: bold;
@@ -261,4 +274,68 @@ main a:hover{
     color: #000;
     text-decoration: none;
     cursor: pointer;
+}
+.contact p {
+    color: var(--text-clr-title);
+    font-size: 16px;
+    font-weight: 600;
+    margin: 10px 0 10px 5px;
+}
+.contact a {
+    color: var(--text-clr-title);
+    font-size: 16px;
+    margin: 10px 0 0 5px;
+}
+.contact input[type='text'] {
+    width: 80%;
+    padding: 10px;
+    margin: 5px;
+    border-radius: 10px;
+    border: none;
+}
+.contact textarea {
+    width: 80%;
+    height: 75px;
+    padding: 10px;
+    margin: 5px;
+    border-radius: 10px;
+    border: none;
+    resize: none;
+}
+.contact input[type='submit'] {
+    width: 60px;
+    padding: 5px;
+    margin: 5px;
+    border-radius: 4px;
+    border: none;
+}
+@media screen and (min-width: 768px) {
+    .contact p {
+        color: var(--text-clr-title);
+        font-size: 24px;
+        font-weight: 600;
+    }
+    .contact input[type='text'] {
+        min-width: 50%;
+        padding: 10px;
+        margin: 10px;
+        border-radius: 10px;
+        border: none;
+    }
+    .contact textarea {
+        min-width: 75%;
+        height: 150px;
+        padding: 10px;
+        margin: 10px;
+        border-radius: 10px;
+        border: none;
+        resize: none;
+    }
+    .contact input[type='submit'] {
+        width: 150px;
+        padding: 10px;
+        margin: 10px;
+        border-radius: 10px;
+        border: none;
+    }
 }
