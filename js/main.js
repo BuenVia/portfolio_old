@@ -66,6 +66,7 @@ window.onclick = function(event) {
     }
 }
 
+// Contact mail success message
 let success = document.URL.indexOf('?commentsubmit=success');
 if(success >= 0) {
 
