@@ -7,20 +7,30 @@ function navOpen() {
     }
 }
 
-let modal = document.getElementById('myModal');
-let btn = document.getElementById('myBtn');
-let span = document.getElementsByClassName('close')[0];
+let pModal = document.getElementById('portfolioMod');
+let pBtn = document.getElementById('portfolioBtn');
+let conModal = document.getElementById('contactMod');
+let conBtn = document.getElementById('contactBtn');
+let portClose = document.getElementsByClassName('portClose')[0];
+let conClose = document.getElementsByClassName('conClose')[0];
 
-btn.onclick = function() {
-    modal.style.display = "block";
+pBtn.onclick = function() {
+    pModal.style.display = "block";
 }
-
-span.onclick = function() {
-    modal.style.display = "none";
+conBtn.onclick = function() {
+    conModal.style.display = "block"
+}
+portClose.onclick = function() {
+    pModal.style.display = "none";
+    conModal.style.display = "none";
+}
+conClose.onclick = function() {
+    conModal.style.display = "none";
 }
 
 window.onclick = function(event) {
-    if(event.target == modal) {
-        modal.style.display = "none";
+    if(event.target == pModal || event.target == conModal) {
+        pModal.style.display = "none";
+        conModal.style.display = "none";
     }
 }

@@ -43,20 +43,34 @@
         <main>
             <h1>MATT CLIFFORD</h1>
             <p>Front-End Web Developer</p>
-            <a href="javascript:void(0)" id="myBtn">Portfolio</a>
-            <a href="javascript:void(0)">Contact</a><br><br><br>
+            <a href="javascript:void(0)" id="portfolioBtn">Portfolio</a>
+            <a href="javascript:void(0)" id="contactBtn">Contact</a><br><br><br>
             <h2>email: matt@buenvia.com</h2>
         </main>
     </div>
-    
+
     <!--Portfolio Modal-->
-    <div id="myModal" class="modal">
-        <div class="modal-content">
-            <span class="close">&times;</span>
+    <section id="portfolioMod" class="portfolio">
+        <div class="portfolio-content">
+            <span class="portClose">&times;</span>
             <button>Download</button>
-            <p>My Portfolio...</p>            
+            <p>My Portfolio...</p> 
+            <p>Different lines of information...</p>           
         </div>
-    </div>
+    </section>
+
+    <!--Contact Modal-->
+    <section id="contactMod" class="contact">
+        <div class="contact-content">
+            <span class="conClose">&times;</span>
+            <p>Contact Me.</p> 
+            <input type="text" name="" id="" placeholder="Name..."><br>
+            <input type="text" name="" id="" placeholder="Email..."><br>
+            <input type="text" name="" id="" placeholder="Phone..."><br>
+            <textarea name="" id="" cols="30" rows="10"></textarea>          
+            <button>Download</button>
+        </div>
+    </section>
 
     <script src="js/main.js"></script>
 </body>
