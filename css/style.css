@@ -31,10 +31,10 @@ body {
 @media screen and (min-width: 770px) {
     .grid {
         display: grid;
-        grid-template-columns: 0.5fr 1fr;
+        grid-template-columns: 0.2fr 1.8fr;
         grid-row: 1fr;
         grid-template-areas: 
-        "sidebar main";
+        "header main";
     }
 }
 
@@ -42,49 +42,31 @@ body {
 .header {
     background-color:rgba(0, 221, 221, 0.3);
     padding: 10px;
-    min-height: 25px;
-
-}
-.header a:not(:first-child) {
-display: none;
-color: var(--text-clr-title);
-text-decoration: none;
-font-size: 18px;
-font-weight: 500;
-margin-top: 20px;
-margin-right: 5%;
+    min-height: 35px;
 }
 .header i {
     float: right;
-    margin-right: 5%;
     color: var(--text-clr-title);
+}
+.header a:not(:first-child) {
+    display: none;
+    color: var(--text-clr-title);
+    text-decoration: none;
+    margin-top: 7%;
 }
 .header.change a {
     display: block;
     text-align: right;
 }
-@media screen and (min-width: 770px) {
-    header {
-        display: none;
-    }
-}
 
-/*Sidebar*/
-.sidebar {
-    display: none;
-    background-color:rgba(0, 221, 221, 0.3);
-    padding: 15px;
-    min-height: 100vh;
-    width: 70%;
-    grid-area: sidebar;
-}
 .profile {
-    display: block;
-    text-align: center;
+    display: none;
+    text-align: left;
     margin-top: 50px;
     margin-bottom: 45px;
 }
 .profile img {
+    align-items: 0 auto;
     width: 150px;
     border-radius: 80%;
 }
@@ -97,7 +79,7 @@ margin-right: 5%;
 .profile h2 {
     color: var(--text-clr-main);
     text-decoration: none;
-    font-size: 14px;
+    font-size: 15px;
     margin-top: 20px;
 }
 .profile h3 {
@@ -106,6 +88,39 @@ margin-right: 5%;
     font-size: 14px;
     margin-top: 10px;
 }
+@media screen and (min-width: 770px) {
+    .header {
+        display: block;
+        background-color:rgba(0, 221, 221, 0.3);
+        padding: 15px;
+        min-height: 100vh;
+        width: 20%;
+        grid-area: header;
+    }
+    .header .fas {
+        display: none;
+    }
+    .header a:not(:first-child) {
+        display: block;
+        color: var(--text-clr-title);
+        text-decoration: none;
+        margin-top: 7%;
+        line-height: 35px;
+        font-size: 20px;
+    }
+    .header a:hover {
+        color: var(--text-clr-main);
+    }
+    .header.change a {
+        display: flex;
+        flex-wrap: wrap;
+    }
+    .profile {
+        display: grid;
+    }
+}
+
+/*Sidebar*/
 .sidebar a {
     color: var(--text-clr-title);
     display: block;
@@ -119,6 +134,7 @@ margin-right: 5%;
 .sidebar a:hover {
     color: var(--text-clr-main);
 }
+
 @media screen and (min-width: 770px) {
     .sidebar {
         display: block;
@@ -159,12 +175,22 @@ main a {
     text-align: left;
     width: 55px;
     cursor: pointer;
-    transition: width 0.5s, font-size 0.5s;
 }
 main a:hover{
     width: 150px;
     font-size: 32px;
+    transition: width 0.5s, font-size 0.5s;
 }
+.links-main {
+    display: block;
+    margin-top: 20%;
+    color: var(--text-clr-title);
+    text-align: left;
+    font-size: 20px;
+}
+.links-main i {
+    margin-right: 5%;
+  }
 @media screen and (min-width: 500px) {
     main {
         padding: 10%;
@@ -179,7 +205,12 @@ main a:hover{
         font-size: 28px;
         width: 150px;
     }
+    .links-main {
+        font-size: 32px;
+        display: block;
+    }
 }
+
 @media screen and (min-width: 770px) {
     main {
         padding-top: 20%;
@@ -197,6 +228,9 @@ main a:hover{
     main a {
         font-size: 28px;
         width: 150px;
+    }
+    .links-main i {
+        display: none;
     }
 }
 
