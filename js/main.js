@@ -20,6 +20,18 @@ portClose.onclick = function() {
     pModal.style.display = "none";
 }
 
+// CV Modal
+let cvModal = document.getElementById('cvMod');
+let cvBtn = document.getElementById('cvOpenBtn');
+let cvClose = document.getElementsByClassName('cvClose')[0];
+
+cvBtn.onclick = function() {
+    cvModal.style.display = "block";
+}
+cvClose.onclick = function() {
+    cvModal.style.display = "none";
+}
+
 // Contact form modal (sidebar)
 let conModal = document.getElementById('contactMod');
 let conBtn = document.getElementById('contactBtn');
@@ -34,8 +46,9 @@ conClose.onclick = function() {
 
 // Closing all modals
 window.onclick = function(event) {
-    if(event.target == pModal || event.target == conModal) {
+    if(event.target == pModal || event.target == conModal || event.target == cvModal) {
         pModal.style.display = "none";
         conModal.style.display = "none";
+        cvModal.style.display = "none";
     }
 }
