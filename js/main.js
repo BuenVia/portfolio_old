@@ -32,7 +32,7 @@ cvClose.onclick = function() {
     cvModal.style.display = "none";
 }
 
-// Contact form modal (sidebar)
+// Contact form modal
 let conModal = document.getElementById('contactMod');
 let conBtn = document.getElementById('contactBtn');
 let conClose = document.getElementsByClassName('conClose')[0];
@@ -44,11 +44,35 @@ conClose.onclick = function() {
     conModal.style.display = "none";
 }
 
+// Resources modal 
+let resModal = document.getElementById('resourcesMod');
+let resBtn = document.getElementById('resourcesBtn');
+let resClose = document.getElementsByClassName('resourcesClose')[0];
+
+resBtn.onclick = function() {
+    resModal.style.display = "block"
+}
+resClose.onclick = function() {
+    resModal.style.display = "none";
+}
+
 // Closing all modals
 window.onclick = function(event) {
-    if(event.target == pModal || event.target == conModal || event.target == cvModal) {
+    if(event.target == pModal || event.target == conModal || event.target == cvModal || event.target == resModal) {
         pModal.style.display = "none";
         conModal.style.display = "none";
         cvModal.style.display = "none";
+        resModal.style.display = "none";
     }
 }
+
+let success = document.URL.indexOf('?commentsubmit=success');
+if(success >= 0) {
+
+    let el = document.getElementById('main');
+    el.innerHTML = el.innerHTML+"<p class='insert'>Thank you for your message. I will respond within 48 hours.</p>"
+
+} else {
+    console.log('fail');
+}
+

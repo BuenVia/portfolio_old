@@ -31,19 +31,20 @@
         </section>
 
         <a href="javascript:void(0)">Home</a>
-        <a href="javascript:void(0)">CV</a>
+        <a href="javascript:void(0)" id="cvOpenBtn">CV</a>
         <a href="javascript:void(0)" id="contactBtn">Contact</a>
-        <a href="javascript:void(0)">Resources</a>
+        <a href="javascript:void(0)" id="resourcesBtn">Resources</a>
         
     </header>
     
     <!--Main Body-->
         <main>
+            <div id="main"></div>
             <h1 class="main-name">MATT CLIFFORD</h1>
             <h1 class="main-intro">...</h1>
             <p>Front-End Web Developer</p>
             <a href="javascript:void(0)" id="portfolioBtn">Portfolio</a>
-            <a href="javascript:void(0)">Item 2</a>
+            <a href="javascript:void(0)">About Me</a>
             <div class="links-main">
                 <i class="fab fa-github"></i>
                 <i class="fab fa-linkedin-in"></i>
@@ -56,8 +57,17 @@
     <section id="portfolioMod" class="portfolio">
         <div class="portfolio-content">
             <span class="portClose">&times;</span>
-            <button>Download</button>
             <p>My Portfolio...</p> 
+            <p>Different lines of information...</p>           
+        </div>
+    </section>
+
+    <!--CV Modal-->
+    <section id="cvMod" class="cv">
+        <div class="cv-content">
+            <span class="cvClose">&times;</span>
+            <button>Download</button>
+            <p>Matt Clifford CV...</p> 
             <p>Different lines of information...</p>           
         </div>
     </section>
@@ -69,14 +79,35 @@
             <p>Contact Me.</p>
             <a>Phone: +44 7708 913 089</a><br><br>
             <a>Email: matt@buenvia.com</a><br><br>
-            <form action="">
-                <input type="text" name="" id="" placeholder="Name..."><br>
-            <input type="text" name="" id="" placeholder="Email..."><br>
-            <input type="text" name="" id="" placeholder="Phone..."><br>
-            <textarea name="" id="" placeholder="Message..."></textarea><br>         
-            <input type="submit" name="" class="">
+            <form action="includes/mail" method="POST">
+                <input type="text" name="name" placeholder="Name..."><br>
+                <input type="text" name="email" placeholder="Email..."><br>
+                <input type="text" name="phone" placeholder="Phone..."><br>
+                <textarea name="msg" placeholder="Message..."></textarea><br>         
+                <button type="submit" name="comment-submit" style="width:20%">SUBMIT</button>
             </form>
+        </div>
+    </section>
 
+    <!--Resources Modal-->
+    <section id="resourcesMod" class="resources">
+        <div class="resources-content">
+            <span class="resourcesClose">&times;</span>
+            <div>
+                <p>Here is a list of resources I have used to teach myself HTML, CSS, JavaScript, PHP and SQL...</p>
+            </div>
+            <h2>Dani Krossing</h2>
+            <p>Daniel Nielsen is a Web Developer from Denmark who provides free web development courses through his 
+                YouTube channel.</p>
+                <p>Dani has been my primary source of videos for learning, with particular focus on his PHP course.</p><br>
+                <a href="https://www.youtube.com/user/TheCharmefis">His channel...</a>
+            <h2>Coder Coder</h2>
+            <p>Kevin Powell</p>
+            <p>Aaron Jack</p>
+            <p>Kalle Hallden</p>
+            <p>Chris Sean</p>
+            <a href="w3schoolscom">W3Schools</a>
+            <p>JavaScript &amp; JQuery by Jon Duckett </p>
         </div>
     </section>
 

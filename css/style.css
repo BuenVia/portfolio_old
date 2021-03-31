@@ -224,7 +224,7 @@ main a:hover{
     }
 }
 
-/*Portfolio*/
+/*Portfolio Modal*/
 .portfolio {
     display: none;
     position: fixed;
@@ -256,7 +256,39 @@ main a:hover{
     cursor: pointer;
 }
 
-/*Contact*/
+/*CV Modal*/
+.cv {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgb(0, 0, 0);
+    background-color: rgba(0, 0, 0, 0.4);
+}
+.cv-content {
+    background-color: #fefefe;
+    margin: 15% auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%;
+}
+.cvClose {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+.cvClose:hover,.cvClose:focus {
+    color: #000;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+/*Contact Modal*/
 .contact {
     display: none;
     position: fixed;
@@ -327,12 +359,15 @@ main a:hover{
     border: none;
     resize: none;
 }
-.contact input[type='submit'] {
+.contact button {
     width: 60px;
     padding: 5px;
     margin: 5px;
     border-radius: 4px;
     border: none;
+}
+.insert {
+    color: var(--text-clr-title);
 }
 @media screen and (min-width: 768px) {
     .contact p {
@@ -368,4 +403,54 @@ main a:hover{
         background-color: var(--bkg-clr-title);
         color: var(--text-clr-title);
     }
+}
+
+/*Resources Modal*/
+.resources {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgb(0, 0, 0);
+    background-color: rgba(0, 0, 0, 0.4);
+}
+.resources-content {
+    background-color: #fefefe;
+    margin: 15% auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%;
+}
+.resourcesClose {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+.resourcesClose:hover,.resourcesClose:focus {
+    color: #000;
+    text-decoration: none;
+    cursor: pointer;
+}
+.resources h2 {
+    margin: 20px 0 5px 0;
+}
+.resources p {
+
+}
+.resources a {
+    text-decoration: none;
+    color: #111;
+    background-color: var(--btn-clr-main);
+    border: 1px solid var(--btn-clr-main);
+    border-radius: 5px;
+    padding: 0 5px 0 5px;
+}
+.resources a:hover {
+    color: #111;
+    background-color: var(--bkg-clr-main);
 }
