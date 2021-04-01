@@ -1,8 +1,11 @@
 :root {
     --bkg-clr-title: #00dddd;
-    --bkg-clr-main: #fff;
+    --bkg-clr-one: #fff;
+    --bkg-clr-two: #C5AE91;
+    --bkg-clr-modal: rgba(197,174,145, 0.9);
     --text-clr-title: #fff;
-    --text-clr-main: #d8d9da;
+    --text-clr-one: #d8d9da;
+    --text-clr-two: #333333;
     --btn-clr-main: #99a1af;
 }
 * {
@@ -79,13 +82,13 @@ body {
     margin-top: 30px;
 }
 .profile h2 {
-    color: var(--text-clr-main);
+    color: var(--text-clr-one);
     text-decoration: none;
     font-size: 14px;
     margin-top: 20px;
 }
 .profile h3 {
-    color: var(--text-clr-main);
+    color: var(--text-clr-one);
     text-decoration: none;
     font-size: 14px;
     margin-top: 10px;
@@ -111,7 +114,7 @@ body {
         font-size: 20px;
     }
     .header a:hover {
-        color: var(--text-clr-main);
+        color: var(--text-clr-one);
     }
     .header.change a {
         display: flex;
@@ -143,7 +146,7 @@ main h1 {
 }
 main p {
     font-size: 14px;
-    color: var(--text-clr-main);
+    color: var(--text-clr-one);
 }
 main a {
     display: block;
@@ -226,7 +229,7 @@ main a:hover{
 
 /*Portfolio Modal*/
 .portfolio {
-    display: none;
+    display: block; /*Change this back to none*/
     position: fixed;
     z-index: 1;
     left: 0;
@@ -238,10 +241,11 @@ main a:hover{
     background-color: rgba(0, 0, 0, 0.4);
 }
 .portfolio-content {
-    background-color: #fefefe;
+    background-color: var(--bkg-clr-modal);
     margin: 15% auto;
     padding: 20px;
     border: 1px solid #888;
+    border-radius: 10px;
     width: 80%;
 }
 .portClose {
@@ -255,7 +259,31 @@ main a:hover{
     text-decoration: none;
     cursor: pointer;
 }
-
+.portfolio h1 {
+    font-size: 32px;
+    font-weight: 800;
+    color: var(--text-clr-two);
+    line-height: 80px;
+}
+.unit {
+    padding: 15px;
+    border-bottom: 2px solid var(--text-clr-two);
+}
+.portfolio-title {
+    color: var(--text-clr-two);
+    text-decoration: none;
+    font-weight: 600;
+    line-height: 40px;
+}
+.portfolio img {
+    max-width: 90%;
+    margin-top: 1rem;
+}
+.portfolio img:hover {
+    max-width: 95%;
+    margin-top: 2rem;
+    transition: 0.5s;
+}
 /*CV Modal*/
 .cv {
     display: none;
@@ -452,5 +480,5 @@ main a:hover{
 }
 .resources a:hover {
     color: #111;
-    background-color: var(--bkg-clr-main);
+    background-color: var(--bkg-clr-one);
 }
