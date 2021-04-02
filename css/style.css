@@ -1,8 +1,8 @@
 :root {
-    --bkg-clr-title: #00dddd;
+    --bkg-clr-title: rgba(1,1,1, 0.5);
     --bkg-clr-one: #fff;
     --bkg-clr-two: #C5AE91;
-    --bkg-clr-modal: rgba(197,174,145, 0.9);
+    --bkg-clr-modal: rgba(1,1,1, 0.9);
     --text-clr-title: #fff;
     --text-clr-one: #d8d9da;
     --text-clr-two: #333333;
@@ -44,7 +44,7 @@ body {
 
 /*Header*/
 .header {
-    background-color:rgba(0, 221, 221, 0.3);
+    background-color:var(--bkg-clr-title);
     padding: 10px;
     min-height: 35px;
     grid-area: header;
@@ -96,7 +96,7 @@ body {
 @media screen and (min-width: 770px) {
     .header {
         display: block;
-        background-color:rgba(0, 221, 221, 0.3);
+        background-color:var(--bkg-clr-title);
         margin-top: 0 auto;
         padding: 35px;
         min-height: 100vh;
@@ -242,7 +242,7 @@ main a:hover{
 }
 .portfolio-content {
     background-color: var(--bkg-clr-modal);
-    margin: 15% auto;
+    margin: 5% auto;
     padding: 20px;
     border: 1px solid #888;
     border-radius: 10px;
@@ -255,34 +255,65 @@ main a:hover{
     font-weight: bold;
 }
 .portClose:hover,.portClose:focus {
-    color: #000;
+    color: var(--bkg-clr-two);
     text-decoration: none;
     cursor: pointer;
 }
 .portfolio h1 {
     font-size: 32px;
     font-weight: 800;
-    color: var(--text-clr-two);
+    color: var(--text-clr-one);
     line-height: 80px;
 }
 .unit {
     padding: 15px;
-    border-bottom: 2px solid var(--text-clr-two);
+    border-bottom: 2px solid var(--text-clr-one);
 }
 .portfolio-title {
-    color: var(--text-clr-two);
+    color: var(--text-clr-one);
     text-decoration: none;
     font-weight: 600;
     line-height: 40px;
 }
+.portfolio p {
+    word-spacing: 10px;
+    color: var(--text-clr-one);
+}
 .portfolio img {
     max-width: 90%;
     margin-top: 1rem;
+    border: 1px solid var(--text-clr-one);
+    border-radius: 6px;
 }
 .portfolio img:hover {
-    max-width: 95%;
-    margin-top: 2rem;
+    opacity: 0.4;
     transition: 0.5s;
+}
+.portBtn {
+    margin-top: 1rem;
+    padding: 4px;
+    background-color: var(--btn-clr-main);
+    border: 1px solid var(--text-clr-two);
+    border-radius: 6px;
+}
+.portBtn:hover {
+    background-color: var(--text-clr-two);
+    color: var(--text-clr-title);
+    cursor: pointer;
+}
+@media screen and (min-width: 1000px) {
+    .portfolio-content {
+        display: flex;
+        flex-wrap: wrap;    
+    }
+    .portfolio h1 {
+        width: 100%;
+        text-align: center;
+    }
+    .unit {
+        max-width: 45%;
+        margin: 0 auto;
+    }  
 }
 /*CV Modal*/
 .cv {
