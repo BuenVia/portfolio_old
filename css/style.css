@@ -332,21 +332,36 @@ main a:hover{
     background-color: rgba(0, 0, 0, 0.4);
 }
 .cv-content {
-    background-color: #fefefe;
+    background-color: var(--bkg-clr-modal);
     margin: 15% auto;
     padding: 20px;
     border: 1px solid #888;
+    border-radius: 10px;
     width: 80%;
+    color: var(--text-clr-one);
 }
 .cvClose {
-    color: #aaa;
+    color: var(--text-clr-one);
     float: right;
     font-size: 28px;
     font-weight: bold;
 }
 .cvClose:hover,.cvClose:focus {
-    color: #000;
+    color: var(--btn-clr-main);
     text-decoration: none;
+    cursor: pointer;
+}
+.cv button {
+    background-color: var(--btn-clr-main);
+    color: var(--text-clr-two);
+    font-weight: 600;
+    padding: 6px;
+    border: 1px solid var(--text-clr-two);
+    border-radius: 6px;
+}
+.cv button:hover {
+    background-color: var(--text-clr-two);
+    color: var(--text-clr-one);
     cursor: pointer;
 }
 
@@ -506,15 +521,14 @@ main a:hover{
 .resources p {
 
 }
-.resources a {
-    text-decoration: none;
+.resources button {
     color: #111;
     background-color: var(--btn-clr-main);
-    border: 1px solid var(--btn-clr-main);
+    border: none;
     border-radius: 5px;
-    padding: 0 5px 0 5px;
+    padding: 6px;
 }
-.resources a:hover {
-    color: #111;
-    background-color: var(--bkg-clr-one);
+.resources button:hover {
+    color: var(--text-clr-one);
+    background-color: var(--text-clr-two);
 }
