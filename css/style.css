@@ -229,7 +229,7 @@ main a:hover{
 
 /*Portfolio Modal*/
 .portfolio {
-    display: block; /*Change this back to none*/
+    display: none; /*Change this back to none*/
     position: fixed;
     z-index: 1;
     left: 0;
@@ -306,6 +306,9 @@ main a:hover{
         display: flex;
         flex-wrap: wrap;    
     }
+    .portClose {
+        margin: 0 auto;
+    }
     .portfolio h1 {
         width: 100%;
         text-align: center;
@@ -361,44 +364,41 @@ main a:hover{
     background-color: rgba(0, 0, 0, 0.4);
 }
 .contact-content {
-    background-color:rgba(0, 221, 221, 0.7);
+    background-color:var(--bkg-clr-modal);
     border-radius: 10px;
     margin: 25% auto;
     padding: 20px;
     border: 1px solid #888;
     width: 80%;
-
+    color: var(--text-clr-one);
 }
 @media screen and (min-width: 768px) {
     .contact-content {
-        background-color:rgba(0, 221, 221, 0.7);
+        background-color:var(--bkg-clr-modal);
         border-radius: 10px;
         margin: 10% auto;
         padding: 20px;
         border: 1px solid #888;
         width: 40%;
-    
     }
 }
 .conClose {
-    color: #ffffff;
+    color: var(--text-clr-title);
     float: right;
     font-size: 28px;
     font-weight: bold;
 }
 .conClose:hover,.conClose:focus {
-    color: #000;
+    color: var(--text-clr-two);
     text-decoration: none;
     cursor: pointer;
 }
 .contact p {
-    color: var(--text-clr-title);
     font-size: 16px;
     font-weight: 600;
     margin: 10px 0 10px 5px;
 }
 .contact a {
-    color: var(--text-clr-title);
     font-size: 16px;
     margin: 10px 15px 15px 5px;
 }
@@ -424,13 +424,18 @@ main a:hover{
     margin: 5px;
     border-radius: 4px;
     border: none;
+    background-color: var(--btn-clr-main);
+}
+.contact button:hover {
+    background-color: var(--text-clr-two);
+    color: var(--text-clr-one);
+    cursor: pointer;
 }
 .insert {
     color: var(--text-clr-title);
 }
 @media screen and (min-width: 768px) {
     .contact p {
-        color: var(--text-clr-title);
         font-size: 24px;
         font-weight: 600;
         margin-bottom: 15px;
@@ -460,7 +465,6 @@ main a:hover{
     }
     .contact input[type='submit']:hover {
         background-color: var(--bkg-clr-title);
-        color: var(--text-clr-title);
     }
 }
 
@@ -478,11 +482,12 @@ main a:hover{
     background-color: rgba(0, 0, 0, 0.4);
 }
 .resources-content {
-    background-color: #fefefe;
+    background-color: var(--bkg-clr-modal);
     margin: 15% auto;
     padding: 20px;
     border: 1px solid #888;
     width: 80%;
+    color: var(--text-clr-one);
 }
 .resourcesClose {
     color: #aaa;
