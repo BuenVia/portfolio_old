@@ -53,11 +53,13 @@ body {
 .header {
     background-color:var(--bkg-clr-title);
     padding: 10px;
-    min-height: 35px;
+    min-height: 20px;
     grid-area: header;
 }
 .header i {
-    float: right;
+    position: absolute;
+    top: 10px;
+    right: 10px;
     color: var(--text-clr-title);
 }
 .header a:not(:first-child) {
@@ -157,6 +159,16 @@ main p {
     color: var(--text-clr-one);
 }
 main a {
+    text-decoration: none;
+    color: var(--text-clr-title);
+}
+main a:hover {
+    color: var(--text-clr-one);
+}
+main i {
+    font-size: 40px;
+}
+main button {
     display: block;
     margin-top: 40px;
     padding: 10px;
@@ -172,7 +184,7 @@ main a {
     cursor: pointer;
     outline: none;
 }
-main a:hover{
+main button:hover{
     background-color: var(--bkg-clr-one);
     color: var(--text-clr-two);
     transition: background-color 1s;
@@ -259,9 +271,11 @@ main a:hover{
 }
 .portClose {
     color: #aaa;
-    float: right;
     font-size: 28px;
     font-weight: bold;
+    position: absolute;
+    top:12%;
+    right: 10%;
 }
 .portClose:hover,.portClose:focus {
     color: var(--bkg-clr-two);
@@ -426,7 +440,7 @@ main a:hover{
 .contact-content {
     background-color:var(--bkg-clr-modal);
     border-radius: 10px;
-    margin: 55% auto;
+    margin: 15% auto;
     padding: 20px;
     border: 1px solid #888;
     width: 80%;
@@ -497,6 +511,7 @@ main a:hover{
 .success {
     padding: 10px 10px 10px 0;
     color: var(--text-clr-title);
+    font-weight: 600;
 }
 .fail {
     padding: 10px;
