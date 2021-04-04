@@ -23,6 +23,12 @@ body {
     background-size: cover;
     background-position: center right;
     background-attachment: fixed;
+    overflow: hidden;
+}
+@media screen and (max-height: 640px){
+    body {
+        overflow:scroll;
+    }
 }
 .grid {
     display: grid;
@@ -93,6 +99,10 @@ body {
     font-size: 14px;
     margin-top: 10px;
 }
+.profile a {
+    text-decoration: none;
+    color: var(--text-clr-one);
+}
 @media screen and (min-width: 770px) {
     .header {
         display: block;
@@ -141,9 +151,6 @@ main h1 {
     color: var(--text-clr-title);
     font-size: 32px;
 }
-.main-intro {
-    display: none;
-}
 main p {
     font-size: 14px;
     color: var(--text-clr-one);
@@ -170,7 +177,7 @@ main a:hover{
 }
 .links-main {
     display: block;
-    margin-top: 20%;
+    margin-bottom: 5%;
     color: var(--text-clr-title);
     text-align: left;
     font-size: 20px;
@@ -223,7 +230,7 @@ main a:hover{
         width: 150px;
     }
     .links-main i {
-        display: none;
+        display: inline-flex;
     }
 }
 
@@ -381,17 +388,18 @@ main a:hover{
 .contact-content {
     background-color:var(--bkg-clr-modal);
     border-radius: 10px;
-    margin: 25% auto;
+    margin: 55% auto;
     padding: 20px;
     border: 1px solid #888;
     width: 80%;
     color: var(--text-clr-one);
+    text-align: center;
 }
 @media screen and (min-width: 768px) {
     .contact-content {
         background-color:var(--bkg-clr-modal);
         border-radius: 10px;
-        margin: 10% auto;
+        margin: 5% auto;
         padding: 20px;
         border: 1px solid #888;
         width: 40%;
@@ -456,14 +464,14 @@ main a:hover{
         margin-bottom: 15px;
     }
     .contact input[type='text'] {
-        min-width: 50%;
+        max-width: 300px;
         padding: 10px;
         margin: 5px;
         border-radius: 10px;
         border: none;
     }
     .contact textarea {
-        min-width: 75%;
+        max-width: 500px;
         height: 150px;
         padding: 10px;
         margin: 5px;
@@ -498,11 +506,12 @@ main a:hover{
 }
 .resources-content {
     background-color: var(--bkg-clr-modal);
-    margin: 15% auto;
+    margin: 5% auto;
     padding: 20px;
     border: 1px solid #888;
     width: 80%;
     color: var(--text-clr-one);
+    line-height: 20px;
 }
 .resourcesClose {
     color: #aaa;
@@ -518,9 +527,7 @@ main a:hover{
 .resources h2 {
     margin: 20px 0 5px 0;
 }
-.resources p {
 
-}
 .resources button {
     color: #111;
     background-color: var(--btn-clr-main);
