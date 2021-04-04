@@ -20,6 +20,18 @@ portClose.onclick = function() {
     pModal.style.display = "none";
 }
 
+// About Modal
+let abtModal = document.getElementById('abtMod');
+let abtBtn = document.getElementById('abtBtn');
+let abtClose = document.getElementsByClassName('abtClose')[0];
+
+abtBtn.onclick = function() {
+    abtModal.style.display = "block";
+}
+abtClose.onclick = function() {
+    abtModal.style.display = "none";
+}
+
 // CV Modal
 let cvModal = document.getElementById('cvMod');
 let cvBtn = document.getElementById('cvOpenBtn');
@@ -58,8 +70,9 @@ resClose.onclick = function() {
 
 // Closing all modals
 window.onclick = function(event) {
-    if(event.target == pModal || event.target == conModal || event.target == cvModal || event.target == resModal) {
+    if(event.target == pModal || event.target == abtModal || event.target == conModal || event.target == cvModal || event.target == resModal) {
         pModal.style.display = "none";
+        abtModal.style.display = "none";
         conModal.style.display = "none";
         cvModal.style.display = "none";
         resModal.style.display = "none";
@@ -68,12 +81,16 @@ window.onclick = function(event) {
 
 // Contact mail success message
 let success = document.URL.indexOf('?commentsubmit=success');
+let fail = document.URL.indexOf('?commentsubmit=fail');
 if(success >= 0) {
 
     let el = document.getElementById('main');
-    el.innerHTML = el.innerHTML+"<p class='insert'>Thank you for your message. I will respond within 48 hours.</p>"
+    el.innerHTML = el.innerHTML+"<div class='success'><p>Thank you for your message. I will respond within 48 hours.</p></div>";
 
-} else {
-    console.log('fail');
+} else if(fail >= 0) {
+
+    let el = document.getElementById('main');
+    el.innerHTML = el.innerHTML+"<div class='fail'><p>Unfortunately it was not possible to send your email.</p><p>Please email matt@buenvia.com for assistance.</p></div><br>";
+
 }
 
