@@ -64,7 +64,7 @@ body {
 .profile-img {
     height: 300px;
     width: 300px;
-    background-image: url('/portfolio/assets/profile.jpg');
+    background-image: url('/assets/profile.jpg');
     background-position:top right 30%;
     border-radius: 50%;
     box-shadow: 0 0 20px 1px grey;
@@ -111,19 +111,19 @@ body {
 }
 
 .html {
-    background-image: url('/portfolio/assets/html.png');
+    background-image: url('/assets/html.png');
 }
 
 .css {
-    background-image: url('/portfolio/assets/css-3.png');
+    background-image: url('/assets/css-3.png');
 }
 
 .javascript {
-    background-image: url('/portfolio/assets/js.png');
+    background-image: url('/assets/js.png');
 }
 
 .bootstrap {
-    background-image: url('/portfolio/assets/bootstrap.png');
+    background-image: url('/assets/bootstrap.png');
 }
 
 /*THIRD SECTION*/
