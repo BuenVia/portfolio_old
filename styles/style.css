@@ -1,7 +1,7 @@
 :root {
     --bkg-clr: rgb(250, 250, 250);
-    --trim-clr: rgb(72, 38, 131);
-    --btn-hover-clr: rgb(72, 38, 190);
+    --trim-clr: rgb(119, 82, 183);
+    --btn-hover-clr: rgb(116, 91, 205);
     --txt-hover-clr: rgb(200, 200, 180)
 }
 
@@ -138,7 +138,7 @@ body {
     border: 1px solid var(--trim-clr);
     border-radius: 30px;
     background-color: var(--trim-clr);
-    opacity: 0.8;
+
 }
 
 .form-input-container {
