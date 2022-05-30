@@ -1,0 +1,181 @@
+:root {
+    --bkg-clr: rgb(250, 250, 250);
+    --trim-clr: rgb(72, 38, 131);
+    --btn-hover-clr: rgb(72, 38, 190);
+    --txt-hover-clr: rgb(200, 200, 180)
+}
+
+*, *::after, *::before {
+ margin: 0;
+ padding: 0;   
+}
+
+body {
+
+}
+
+.height-container {
+    height: 100vh;
+}
+
+.flex-col {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.flex-row {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.btn-fp {
+    width: 200px;
+    background-color: var(--trim-clr);
+    color: white;
+}   
+
+.btn-fp:hover {
+    transition: 500ms;
+    background-color: var(--btn-hover-clr);
+    color: var(--txt-hover-clr);
+}
+
+/*NAV*/
+.nav {
+    padding: .5rem;
+    background-color: var(--trim-clr);
+}
+
+/*MAIN BODY*/
+/*FIRST SECTION*/
+
+.profile-container {
+    gap: 3rem;
+}
+
+.img-container {
+    margin: 1rem;
+}
+
+.profile-img {
+    height: 300px;
+    width: 300px;
+    background-image: url('/portfolio/assets/profile.jpg');
+    background-position:top right 30%;
+    border-radius: 50%;
+    box-shadow: 0 0 20px 1px grey;
+}
+
+.name-container {
+    color: var(--trim-clr);
+
+}
+
+.btn-container {
+    margin: 2rem;
+    gap: 1rem;
+}
+
+/*SECOND SECTION*/
+.lang-container {
+    padding: 5rem;
+    gap: 1rem;
+    border: 1px solid var(--trim-clr);
+    border-radius: 30px;
+    box-shadow: 0 0 10px 3px var(--trim-clr);
+}
+
+.lang-card {
+    width: 10rem;
+    padding: 1rem;
+    margin: 1rem;
+    border-radius: 10px;
+    box-shadow: 0 0 8px 1px rgb(198, 198, 198);
+}
+
+.lang-card:hover {
+    transition: 500ms;
+    box-shadow: 0 0 10px 1px grey;
+}
+
+.icon {
+    height: 50px;
+    width: 50px;
+    background-repeat: no-repeat;
+    background-size: 50px;
+    background-position: top;
+}
+
+.html {
+    background-image: url('/portfolio/assets/html.png');
+}
+
+.css {
+    background-image: url('/portfolio/assets/css-3.png');
+}
+
+.javascript {
+    background-image: url('/portfolio/assets/js.png');
+}
+
+.bootstrap {
+    background-image: url('/portfolio/assets/bootstrap.png');
+}
+
+/*THIRD SECTION*/
+.flex-form {
+    display: flex;
+    flex-direction: column;
+    justify-items: left;
+}
+
+.form-container {
+    padding: 4rem;
+    border: 1px solid var(--trim-clr);
+    border-radius: 30px;
+    background-color: var(--trim-clr);
+    opacity: 0.8;
+}
+
+.form-input-container {
+    margin: 1rem;
+    display: flex;
+    justify-items: left;
+}
+
+.form-input-container label {
+    color: var(--txt-hover-clr);
+}
+
+.form-input-text {
+    padding: .25rem;
+    border: 1px solid var(--trim-clr);
+    border-radius: 8px;
+    outline: none;
+}
+
+.form-textarea {
+    padding: .5rem;
+    width: 500px;
+    height: 300px;
+    resize: none;
+    border: 1px solid var(--trim-clr);
+    border-radius: 8px;
+    outline: none;
+}
+
+.btn-form {
+    width: 120px;
+    background-color: white;
+    color: var(--trim-clr);
+}   
+
+.btn-form:hover {
+    transition: 500ms;
+    background-color: var(--txt-hover-clr);
+    color: var(--btn-hover-clr);
+}
