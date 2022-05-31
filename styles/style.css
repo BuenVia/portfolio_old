@@ -127,7 +127,9 @@ body {
 }
 
 /*THIRD SECTION*/
-
+.card-width {
+    width: 100%;
+}
 
 /*FOURTH SECTION*/
 .flex-form {
