@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+    <title>Finance Tracker</title>
+</head>
+<body>
+    
+    <a href="../">HOME</a>
+    <div class="header">
+        <h1>FINANCE TRACKER</h1>
+    </div>
+
+    <div class="body-row">
+        <div class="input-container">
+            
+            <div class="container-row">
+                <div class="item">
+                    <label for="paymentType">TYPE</label>
+                    <select id="paymentType">
+                        <option selected value="">SELECT</option>
+                        <option value="DEBIT">DEBIT</option>
+                        <option value="CREDIT">CREDIT</option>
+                    </select>
+                </div>
+                
+                <div class="item">
+                    <label for="amount">AMOUNT</label>
+                    <input type="number" step=".01" id="amount" placeholder="Enter Amount">
+                </div>
+                
+                <div class="item">
+                    <label for="category">CATEGORY</label>
+                    <select id="category">
+                        <option value="utility">UTILITY</option>
+                        <option value="rent">RENT</option>
+                        <option value="car">CAR</option>
+                        <option value="eating out">EATING OUT</option>
+                    </select>
+                </div>
+
+                <div class="item">
+                    <label for="company">COMPANY</label>
+                    <input type="text" id="company" placeholder="Enter Company">
+                </div>
+                
+                <div class="item">
+                    <label for="date">DATE</label>
+                    <input type="date" id="date">
+                </div>
+            </div>
+
+            <div class="container-row">
+                <button class="btn add" id="submit">ADD</button>
+                <button class="btn add" id="clear">RESET</button>
+            </div>
+
+        </div>    
+    </div>
+
+    <div class="body-row">
+        <div class="summary-container">
+            <div class="container-row">
+                <h3>TOTAL SPENT: <span id="totalSpent">$00.00</span></h3>
+                <h3>TOTAL DEBIT: <span id="totalDebit">$00.00</span></h3>
+                <h3>TOTAL CREDIT: <span id="totalCredit">$00.00</span></h3>
+            </div>    
+        </div>
+
+        <div class="output-container" id="outputContainer"></div>
+    </div>
+
+</body>
+</html>

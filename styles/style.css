@@ -143,12 +143,21 @@ body {
 }
 
 .portfolio-img {
-
-    background-image: url('/assets/merchstore.png');
     height: 100%;
     width: 100%;
     background-repeat: no-repeat;
     background-size: 300px;
+}
+
+
+.sports-stash-img {
+    background-image: url('/assets/port_merchstore.png');
+}
+.arc-img {
+    background-image: url('/assets/port_arc.png');
+}
+.finance-tracker-img {
+    background-image: url('/assets/port_tracker.png');
 }
 
 .btn-st {
