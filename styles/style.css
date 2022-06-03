@@ -15,7 +15,7 @@ body {
 }
 
 .height-container {
-    height: 100vh;
+    min-height: 100vh;
 }
 
 .flex-col {
@@ -127,8 +127,40 @@ body {
 }
 
 /*THIRD SECTION*/
+.bg-wd {
+    width: 100%;
+    background-color: rgb(236, 236, 236);
+    padding: 1rem;
+}
 .card-width {
     width: 100%;
+}
+
+.card-btn-cont {
+    display: flex;
+    flex-direction: row;
+    gap: 1rem;
+}
+
+.portfolio-img {
+
+    background-image: url('/assets/merchstore.png');
+    height: 100%;
+    width: 100%;
+    background-repeat: no-repeat;
+    background-size: 300px;
+}
+
+.btn-st {
+    width: 100px;
+    background-color: var(--trim-clr);
+    color: white;
+}   
+
+.btn-st:hover {
+    transition: 500ms;
+    background-color: var(--btn-hover-clr);
+    color: var(--txt-hover-clr);
 }
 
 /*FOURTH SECTION*/
