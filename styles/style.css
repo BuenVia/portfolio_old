@@ -156,6 +156,9 @@ body {
 .arc-img {
     background-image: url('/assets/port_arc.png');
 }
+.verb-img {
+    background-image: url('/assets/port_verb.png');
+}
 .finance-tracker-img {
     background-image: url('/assets/port_tracker.png');
 }
