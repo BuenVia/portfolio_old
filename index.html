@@ -24,188 +24,179 @@
                         <a class="nav-link" href="#home">Home</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#about">About</a>
+                        <a class="nav-link" href="#contact">Contact</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="#projects">Projects</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#contact">Contact</a>
                     </li>
                 </ul>
             </div>
     </div>
   </nav>
 
-<main class="container flex-col">
+<main>
+    <div class="container flex-col">
 
-    <!--FIRST SECTION-->
-    <div class="row height-container" id="home">
-    
-        <div class="profile-container">      
-            <div class="img-container">
-                <div class="profile-img"></div>
-            </div>    
-            
-            <div class="flex-col name-container">
-                <h1>Matt Clifford</h1>
-                <h4>Front-End Developer</h4>
-                <div class="flex-col btn-container">
-                    <button class="btn btn-lg btn-fp">CV</button>
-                    <div class="flex-row btn-container">
-                        <div>
-                            <a href="https://www.linkedin.com/in/mattclifford123/" target="_blank" rel="noopener noreferrer"><button class="btn btn-sm">LinkedIn</button></a>
-                        </div>
-                        <div>
-                            <a href="https://github.com/BuenVia" target="_blank" rel="noopener noreferrer"><button class="btn btn-sm">GitHub</button></a>
+        <!--FIRST SECTION-->
+        <div class="row height-container" id="home">
+        
+            <div class="profile-container">      
+                <div class="img-container">
+                    <div class="profile-img"></div>
+                </div>    
+                
+                <div class="flex-col name-container">
+                    <h1>Matt Clifford</h1>
+                    <h4>Front-End Developer</h4>
+                    <div class="flex-col btn-container">
+                        <button class="btn btn-lg btn-fp">CV</button>
+                        <div class="flex-row btn-container">
+                            <div>
+                                <a href="https://www.linkedin.com/in/mattclifford123/" target="_blank" rel="noopener noreferrer"><button class="btn btn-sm">LinkedIn</button></a>
+                            </div>
+                            <div>
+                                <a href="https://github.com/BuenVia" target="_blank" rel="noopener noreferrer"><button class="btn btn-sm">GitHub</button></a>
+                            </div>
                         </div>
                     </div>
                 </div>
-            </div>
+            </div>     
+
         </div>
-    
-        
     </div>
 
                 
     <!--SECOND SECTION-->
-    <div class="row height-container" id="about">
-        <div class="flex-row">
-            <div class="lang-container">
+    <div class="alt-bg flex-col">
+        <div class="row height-container container" id="contact">
 
+            <div class="flex-col">
 
-                <div class="card lang-card flex-col">
-                    <h5 class="card-title">HTML</h5>
-                    <span class="icon html"></span>
+                <div class="flex-col contact">
+                    <h3>Matt Clifford</h3>    
+                    <p>matthewclifford@hotmail.co.uk</p>
+                    <p>+44 (0)7708 913 089</p>
+                    <div class="flex-row btn-container">
+                        <button class="btn-social"><img src="/assets/github-sign.png" class="img-social" alt="GitHub"></button>
+                        <button class="btn-social"><img src="/assets/linkedin.png" class="img-social" alt="LinkedIn"></button>
+                        <button class="btn-social"><img src="/assets/twitter-sign.png" class="img-social" alt="Twitter"></button>
+                    </div>
                 </div>
 
+                <div class="lang-container">
 
-                <div class="card lang-card flex-col">
-                    <h5 class="card-title">CSS</h5>
-                    <span class="icon css"></span>
+
+                    <div class="card lang-card flex-col">
+                        <h5 class="card-title">HTML</h5>
+                        <span class="icon html"></span>
+                    </div>
+
+
+                    <div class="card lang-card flex-col">
+                        <h5 class="card-title">CSS</h5>
+                        <span class="icon css"></span>
+                    </div>
+
+                    <div class="card lang-card flex-col">
+                        <h5 class="card-title">JAVASCRIPT</h5>
+                        <span class="icon javascript"></span>
+                    </div>
+
+                    <div class="card lang-card flex-col">
+                        <h5 class="card-title">BOOTSTRAP</h5>
+                        <span class="icon bootstrap"></span>
+                    </div>
+
                 </div>
-
-                <div class="card lang-card flex-col">
-                    <h5 class="card-title">JAVASCRIPT</h5>
-                    <span class="icon javascript"></span>
-                </div>
-
-                <div class="card lang-card flex-col">
-                    <h5 class="card-title">BOOTSTRAP</h5>
-                    <span class="icon bootstrap"></span>
-                </div>
-
             </div>
+
         </div>
     </div>
-        
+
+            
     <!--THIRD SECTION-->
-    <div class="row height-container">
-        <div class="flex-col" id="projects">
-            <h2>Projects</h2>
-            <div class="row row-cols-1 row-cols-md-2 g-4">
+    <div class="container flex-col">
+        <div class="row height-container">
+            <div class="flex-col" id="projects">
+                <div class="name-container" style="margin-bottom: 2rem;">    
+                    <h2>Projects</h2>
+                </div>
+                <div class="row row-cols-1 row-cols-md-2 g-4">
 
-                <div class="card mb-3 bg-wd">
-                    <div class="row g-0">
-                        <div class="col-md-4">
-                            <div class="portfolio-img sports-stash-img"></div>
-                        </div>
-                        <div class="col-md-8">
-                            <div class="card-body">
-                                <h5 class="card-title">Sports Stash</h5>
-                                <p class="card-text">An eCommerce store. Built with HTML, CSS and JS (no frameworks).</p>
-                                <div class="card-btn-cont">
-                                    <a href="/eCommerce" target="_blank" rel="noopener noreferrer"><button class="btn btn-sm btn-st">Site</button></a>
-                                    <a href=""><button class="btn btn-sm btn-st">Github</button></a>
+                    <div class="card mb-3 bg-wd">
+                        <div class="row g-0">
+                            <div class="col-md-4">
+                                <div class="verb-img portfolio-img"></div>
+                            </div>
+                            <div class="col-md-8">
+                                <div class="card-body">
+                                    <h5 class="card-title">VerbApps</h5>
+                                    <p class="card-text">A language learning app for practicing verb conjugations. Built with HTML, CSS and JS (no frameworks).</p>
+                                    <div class="card-btn-cont">
+                                        <a href="/VerbApp/" target="_blank" rel="noopener noreferrer"><button class="btn btn-sm btn-st">Site</button></a>
+                                        <a href=""><button class="btn btn-sm btn-st">Github</button></a>
+                                    </div>
                                 </div>
                             </div>
                         </div>
                     </div>
-                </div>
 
-                <div class="card mb-3 bg-wd">
-                    <div class="row g-0">
-                        <div class="col-md-4">
-                            <div class="arc-img portfolio-img"></div>
-                        </div>
-                        <div class="col-md-8">
-                            <div class="card-body">
-                                <h5 class="card-title">ARC Support Services</h5>
-                                <p class="card-text">Website for ARC Support Services built using HTML, CSS, JS and PHP.</p>
-                                <div class="card-btn-cont">
-                                    <a href="http://arcsupportservices.co.uk" target="_blank" rel="noopener noreferrer"><button class="btn btn-sm btn-st">Site</button></a>
-                                    <a href=""><button class="btn btn-sm btn-st">Github</button></a>
+                    <div class="card mb-3 bg-wd">
+                        <div class="row g-0">
+                            <div class="col-md-4">
+                                <div class="portfolio-img sports-stash-img"></div>
+                            </div>
+                            <div class="col-md-8">
+                                <div class="card-body">
+                                    <h5 class="card-title">Sports Stash</h5>
+                                    <p class="card-text">An eCommerce store. Built with HTML, CSS and JS (no frameworks).</p>
+                                    <div class="card-btn-cont">
+                                        <a href="/eCommerce" target="_blank" rel="noopener noreferrer"><button class="btn btn-sm btn-st">Site</button></a>
+                                        <a href=""><button class="btn btn-sm btn-st">Github</button></a>
+                                    </div>
                                 </div>
                             </div>
                         </div>
                     </div>
-                </div>
 
-                <div class="card mb-3 bg-wd">
-                    <div class="row g-0">
-                        <div class="col-md-4">
-                            <div class="verb-img portfolio-img"></div>
-                        </div>
-                        <div class="col-md-8">
-                            <div class="card-body">
-                                <h5 class="card-title">VerbApps</h5>
-                                <p class="card-text">A language learning app for practicing verb conjugations. Built with HTML, CSS and JS (no frameworks).</p>
-                                <div class="card-btn-cont">
-                                    <a href="/VerbApp/" target="_blank" rel="noopener noreferrer"><button class="btn btn-sm btn-st">Site</button></a>
-                                    <a href=""><button class="btn btn-sm btn-st">Github</button></a>
+                    <div class="card mb-3 bg-wd">
+                        <div class="row g-0">
+                            <div class="col-md-4">
+                                <div class="arc-img portfolio-img"></div>
+                            </div>
+                            <div class="col-md-8">
+                                <div class="card-body">
+                                    <h5 class="card-title">ARC Support Services</h5>
+                                    <p class="card-text">Website for ARC Support Services built using HTML, CSS, JS and PHP.</p>
+                                    <div class="card-btn-cont">
+                                        <a href="http://arcsupportservices.co.uk" target="_blank" rel="noopener noreferrer"><button class="btn btn-sm btn-st">Site</button></a>
+                                        <a href=""><button class="btn btn-sm btn-st">Github</button></a>
+                                    </div>
                                 </div>
                             </div>
                         </div>
                     </div>
-                </div>
 
-                <div class="card mb-3 bg-wd">
-                    <div class="row g-0">
-                        <div class="col-md-4">
-                            <div class="finance-tracker-img portfolio-img"></div>
-                        </div>
-                        <div class="col-md-8">
-                            <div class="card-body">
-                                <h5 class="card-title">Finance Tracker</h5>
-                                <p class="card-text">Track monetary incomings and outgoings. Built usings HTML, CSS and JS.</p>
-                                <div class="card-btn-cont">
-                                    <a href="/finance_tracker" target="_blank" rel="noopener noreferrer"><button class="btn btn-sm btn-st">Site</button></a>
-                                    <a href=""><button class="btn btn-sm btn-st">Github</button></a>
+                    <div class="card mb-3 bg-wd">
+                        <div class="row g-0">
+                            <div class="col-md-4">
+                                <div class="finance-tracker-img portfolio-img"></div>
+                            </div>
+                            <div class="col-md-8">
+                                <div class="card-body">
+                                    <h5 class="card-title">Finance Tracker</h5>
+                                    <p class="card-text">Track monetary incomings and outgoings. Built usings HTML, CSS and JS.</p>
+                                    <div class="card-btn-cont">
+                                        <a href="/finance_tracker" target="_blank" rel="noopener noreferrer"><button class="btn btn-sm btn-st">Site</button></a>
+                                        <a href=""><button class="btn btn-sm btn-st">Github</button></a>
+                                    </div>
                                 </div>
                             </div>
                         </div>
                     </div>
+                
                 </div>
-              
             </div>
-        </div>
-    </div>
-
-    <!--FOURTH SECTION-->
-    <div class="row height-container" id="contact">
-        <div class="flex-col">
-            <h3>Matt Clifford</h3>
-            
-            <p>matthewclifford@hotmail.co.uk</p>
-            <p>+44 (0)7708 913 089</p>
-            
-            <!-- <form action="" method="POST" class="flex-form form-container ">
-                <div class="flex-form form-input-container">
-                    <label for="name">Name</label>
-                    <input type="text" name="name" id="name" class="form-input-text">
-                </div>
-                <div class="flex-form form-input-container">
-                    <label for="email">Email</label>
-                    <input type="text" name="email" id="email" class="form-input-text">
-                </div>
-                <div class="flex-form form-input-container">
-                    <label for="message">Message</label>
-                    <textarea name="msg" id="msg" class="form-textarea"></textarea>
-                </div>
-                <div class="flex-form form-input-container">
-                    <input type="submit" name="comment-submit" id="comment-submit" class="btn btn-sm btn-form">
-                </div>
-            </form> -->
         </div>
     </div>
 
