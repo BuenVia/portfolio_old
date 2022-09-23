@@ -16,7 +16,7 @@ app.use(express.static(`${__dirname}/public`))
 // Pages //
 app.get('/', pageRouter)
 app.get('/blog', pageRouter)
-app.get('/blog/:id', pageRouter)
+app.get('/:article', pageRouter)
 
 // API //
 // Blog

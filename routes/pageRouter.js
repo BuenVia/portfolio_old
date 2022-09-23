@@ -1,12 +1,23 @@
 const express = require('express')
+const { get } = require('mongoose')
 const router = express.Router()
 const Article = require('../models/blogSchema')
 const Project = require('../models/projectSchema')
 
+let blog
+
 ////////// PAGES ///////////
 router.get('/', (req, res) => {
-    let blog
-    Article.find().limit(1).sort({natural: -1})
+    // function getData() {
+    //     try {
+    //         Article.findOne({}, (err, item) => {
+    //             blog = item
+    //         }).limit(1).sort({$natural: -1})           
+    //     } catch (err) {
+    //         console.error(err);
+    //     }
+    // }
+    // getData()
     Project.find({}, (err, foundResults) => {
         if(!err) {
             res.render('home', { projects: foundResults, blog: blog })
@@ -23,17 +34,13 @@ router.get('/blog', (req, res) => {
         } else {
             res.send(err)
         }
-    })
+    }).sort({$natural: -1})
 })
 
-router.get('/blog/:id', (req, res) => {
-    const article = req.params.id
-    Article.findOne({ _id: article }, (err, foundResult) => {
-        if (!err) {
-            res.render('article', { article: foundResult })
-        } else {
-            res.send(err)
-        }
+router.get('/:article', (req, res) => {
+    const article = req.params.article
+    Article.findOne({_id: article}, (err, foundResult) => {
+        res.render('post', { art: foundResult })
     })
 })
 
