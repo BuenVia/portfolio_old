@@ -16,6 +16,10 @@ const projectSchema = new mongoose.Schema({
     gitHub: {
         type: String,
         require: true
+    },
+    img: {
+        type: String,
+        require: true
     }
 })
 

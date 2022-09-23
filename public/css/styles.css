@@ -43,3 +43,7 @@ body {
     background-color: var(--btn-hover-clr);
     color: var(--txt-hover-clr);
 }
+
+.img-height {
+    height: 100%;
+}

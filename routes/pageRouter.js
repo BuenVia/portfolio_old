@@ -6,7 +6,7 @@ const Project = require('../models/projectSchema')
 ////////// PAGES ///////////
 router.get('/', (req, res) => {
     let blog
-    Article.find({}, (err, resFound) => { blog = resFound }).limit(1).sort({$natural:-1})
+    Article.find().limit(1).sort({natural: -1})
     Project.find({}, (err, foundResults) => {
         if(!err) {
             res.render('home', { projects: foundResults, blog: blog })
