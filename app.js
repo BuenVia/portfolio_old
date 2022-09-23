@@ -18,13 +18,14 @@ app.get('/', pageRouter)
 app.get('/blog', pageRouter)
 app.get('/blog/:id', pageRouter)
 
-app.get('/home', (req, res) => {
-    res.render('home')
-})
-
 // API //
+// Blog
 app.get('/api/blog', pageRouter)
 app.post('/api/blog', pageRouter)
+
+// Projects
+app.get('/api/projects', pageRouter)
+app.post('/api/projects', pageRouter)
 
 app.listen(port, (req, res) => {
     console.log(`App is listening on port: ${port}`);

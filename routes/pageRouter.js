@@ -1,10 +1,19 @@
 const express = require('express')
 const router = express.Router()
 const Article = require('../models/blogSchema')
+const Project = require('../models/projectSchema')
 
 ////////// PAGES ///////////
 router.get('/', (req, res) => {
-    res.render('index')
+    let blog
+    Article.find({}, (err, resFound) => { blog = resFound }).limit(1).sort({$natural:-1})
+    Project.find({}, (err, foundResults) => {
+        if(!err) {
+            res.render('home', { projects: foundResults, blog: blog })
+        } else {
+            res.send(err)
+        }
+    })
 })
 
 router.get('/blog', (req, res) => {
@@ -29,6 +38,7 @@ router.get('/blog/:id', (req, res) => {
 })
 
 ////////// API ///////////
+//Blog//
 router.get('/api/blog', (req, res) => {
     Article.find({}, (err, foundResults) => {
         if(!err) {
@@ -48,6 +58,33 @@ router.post('/api/blog', (req, res) => {
     newArticle.save((err) => {
         if (!err) {
             res.send(`Article sent\n ${newArticle}`)
+        } else {
+            res.send(err)
+        }
+    })
+})
+
+//Projects//
+router.get('/api/projects', (req, res) => {
+    Project.find({}, (err, foundResult) => {
+        if(!err) {
+            res.send(foundResult)
+        } else {
+            res.send(err)
+        }
+    })
+})
+
+router.post('/api/projects', (req, res) => {
+    const newProject = new Project({
+        title: req.body.title,
+        content: req.body.content,
+        site: req.body.site,
+        gitHub: req.body.gitHub,
+    })
+    newProject.save((err) => {
+        if(!err) {
+            res.send(`New Project has been successully saved:\n${newProject}`)
         } else {
             res.send(err)
         }
