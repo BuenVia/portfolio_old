@@ -1,0 +1,13 @@
+<%- include('partials/header') %>
+
+<% posts.forEach(post => { %>
+    <div class="card">
+        <h6><%= post.title %></h6>
+        <p>By <%= post.auth %></p>
+        <p><%= post.content.substring(0, 20) %>...</p>
+        <a href="/blog/<%- post._id %> ">Read more...</a>
+    </div>
+
+<% }) %>
+
+<%- include('partials/footer') %> 

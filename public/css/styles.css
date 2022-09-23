@@ -1,0 +1,16 @@
+:root {
+    --bkg-clr: rgb(250, 250, 250);
+    --trim-clr: rgb(119, 82, 183);
+    --btn-hover-clr: rgb(116, 91, 205);
+    --txt-hover-clr: rgb(200, 200, 180);
+    --alt-border-clr: rgb(122, 122, 122);
+    --alt-shadow-clr: rgb(119, 82, 183);
+}
+
+.navbar {
+    padding: .5rem;
+    background-color: var(--trim-clr);
+}
+.navbar a {
+    color: white;
+}
