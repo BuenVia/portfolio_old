@@ -38,11 +38,40 @@ router.post('/admin/edit-project/', (req, res) => {
     }
     Project.updateOne({ _id: projectId }, {$set: updateProject}, (err) => {
         if(!err) {
-            res.render('admin/index')
+            res.redirect('/admin?success=true')
         } else {
             res.send(err);
         }
     })
+})
+
+router.get('/admin/edit-blog', (req, res) => {
+    Article.find({}, (err, foundResults) => {
+        if(!err) {
+            res.render('admin/edit-blog', { blogs: foundResults })
+        }
+    })
+})
+
+router.get('/admin/edit-blog/:id', (req, res) => {
+    const blogId = req.params.id
+    Article.findOne({_id: blogId}, (err, foundResult) => {
+        if(!err) {
+            res.render('admin/edit-blog-form', { blog: foundResult })
+        }
+    })
+})
+
+router.post('/admin/edit-blog', (req, res) => {
+    const blogId = req.body.id
+    const updateBlog = {
+        title: req.body.title,
+        auth: req.body.auth,
+        content: req.body.content
+    }
+    console.log(blogId, updateBlog);
+    res.redirect('/admin?success=true&blog-update=true')
+    /////// BUILD TO BE COMPLETED
 })
 
 module.exports = router

@@ -24,6 +24,9 @@ app.get('/admin', adminRouter)
 app.get('/admin/edit-project', adminRouter)
 app.get('/admin/edit-project/:id', adminRouter)
 app.post('/admin/edit-project', adminRouter)
+app.get('/admin/edit-blog', adminRouter)
+app.get('/admin/edit-blog/:id', adminRouter)
+app.post('/admin/edit-blog', adminRouter)
 
 // API //
 // Blog
