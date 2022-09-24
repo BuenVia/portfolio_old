@@ -69,9 +69,14 @@ router.post('/admin/edit-blog', (req, res) => {
         auth: req.body.auth,
         content: req.body.content
     }
-    console.log(blogId, updateBlog);
-    res.redirect('/admin?success=true&blog-update=true')
-    /////// BUILD TO BE COMPLETED
+    Article.updateOne({ _id: blogId }, {$set: updateBlog },(err) => {
+        if (!err) {
+            res.redirect('/admin?update=blog&success=true')
+        } else {
+            res.redirect('/admin?update=blog%success=false')
+            console.error(err);
+        }
+    })
 })
 
 module.exports = router
