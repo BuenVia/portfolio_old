@@ -1,49 +1,58 @@
 :root {
-    --bkg-clr: rgb(0, 0, 0);
-    --card-bkg-clr: rgb(41, 40, 51);
-    --txt-clr: rgb(236, 236, 236);
-    --trim-clr: rgb(119, 82, 183);
-    --btn-hover-clr: rgb(116, 91, 205);
-    --txt-hover-clr: rgb(200, 200, 180);
-    --alt-border-clr: rgb(122, 122, 122);
-    --alt-shadow-clr: rgb(119, 82, 183);
+  --bkg-clr: rgb(0, 0, 0);
+  --card-bkg-clr: rgb(41, 40, 51);
+  --txt-clr: rgb(236, 236, 236);
+  --trim-clr: rgb(119, 82, 183);
+  --btn-hover-clr: rgb(116, 91, 205);
+  --txt-hover-clr: rgb(200, 200, 180);
+  --alt-border-clr: rgb(122, 122, 122);
+  --alt-shadow-clr: rgb(119, 82, 183);
 }
 
 body {
-    background-color: var(--bkg-clr);
+  background-color: var(--bkg-clr);
 }
 
 .card {
-    background-color: var(--card-bkg-clr);
-    color: var(--txt-clr);
+  background-color: var(--card-bkg-clr);
+  color: var(--txt-clr);
+  height: 100%;
+}
+
+.card h5 {
+  font-size: 24px;
+}
+
+.card p {
+  color: silver;
 }
 
 .flex-col {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
 .navbar {
-    padding: .5rem;
-    background-color: var(--trim-clr);
+  padding: 0.5rem;
+  background-color: var(--trim-clr);
 }
 .navbar a {
-    color: white;
+  color: white;
 }
 
 .btn-sm {
-    background-color: var(--trim-clr);
-    color: white;
-}   
+  background-color: var(--trim-clr);
+  color: white;
+}
 
 .btn-sm:hover {
-    transition: 500ms;
-    background-color: var(--btn-hover-clr);
-    color: var(--txt-hover-clr);
+  transition: 500ms;
+  background-color: var(--btn-hover-clr);
+  color: var(--txt-hover-clr);
 }
 
 .img-height {
-    height: 100%;
+  height: 100%;
 }
